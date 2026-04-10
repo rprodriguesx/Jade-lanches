@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardápio Bebê 7 meses</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fdf6ee;
+    --blush: #f2c4a0;
+    --terracotta: #c97b50;
+    --sage: #8aab8a;
+    --sage-light: #d4e8d4;
+    --dusty-rose: #e8b4b8;
+    --dusty-rose-light: #fae8e9;
+    --golden: #e8c86a;
+    --golden-light: #fdf3d0;
+    --sky: #a8c8e0;
+    --sky-light: #deeef8;
+    --lavender: #c4b0d8;
+    --lavender-light: #ede8f5;
+    --text-dark: #3a2e2a;
+    --text-mid: #6b5548;
+    --text-light: #9c8070;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+background-color: var(–cream);
+color: var(–text-dark);
+min-height: 100vh;
+}
+
+/* HERO */
+.hero {
+background: linear-gradient(135deg, #f9ede0 0%, #fdf6ee 50%, #eef5ee 100%);
+padding: 50px 24px 40px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: ‘’;
+position: absolute;
+top: -60px; right: -60px;
+width: 220px; height: 220px;
+background: radial-gradient(circle, #f2c4a040, transparent 70%);
+border-radius: 50%;
+}
+.hero::after {
+content: ‘’;
+position: absolute;
+bottom: -40px; left: -40px;
+width: 180px; height: 180px;
+background: radial-gradient(circle, #8aab8a30, transparent 70%);
+border-radius: 50%;
+}
+.hero-emoji { font-size: 48px; margin-bottom: 12px; display: block; }
+.hero h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(26px, 6vw, 40px);
+color: var(–terracotta);
+line-height: 1.2;
+margin-bottom: 8px;
+}
+.hero p {
+font-size: 14px;
+color: var(–text-light);
+max-width: 400px;
+margin: 0 auto 20px;
+line-height: 1.6;
+}
+.badge-row {
+display: flex;
+gap: 8px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.badge {
+background: white;
+border-radius: 20px;
+padding: 5px 14px;
+font-size: 12px;
+font-weight: 500;
+color: var(–text-mid);
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* SECTION */
+.section {
+padding: 32px 16px 8px;
+max-width: 700px;
+margin: 0 auto;
+}
+.section-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 20px;
+color: var(–terracotta);
+margin-bottom: 16px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.section-title::after {
+content: ‘’;
+flex: 1;
+height: 1px;
+background: linear-gradient(to right, var(–blush), transparent);
+}
+
+/* TEMPEROS CARD */
+.spice-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-bottom: 12px;
+}
+.spice-card {
+background: white;
+border-radius: 14px;
+padding: 14px 16px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.spice-card.ok { border-left: 4px solid var(–sage); }
+.spice-card.no { border-left: 4px solid var(–dusty-rose); }
+.spice-card-title {
+font-size: 11px;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+margin-bottom: 8px;
+}
+.spice-card.ok .spice-card-title { color: var(–sage); }
+.spice-card.no .spice-card-title { color: #c47070; }
+.spice-list {
+list-style: none;
+font-size: 12.5px;
+color: var(–text-mid);
+line-height: 1.8;
+}
+.spice-list li::before { content: ’· ’; color: var(–blush); }
+
+/* TEXTURA */
+.texture-tip {
+background: var(–golden-light);
+border-radius: 12px;
+padding: 12px 16px;
+font-size: 13px;
+color: var(–text-mid);
+border-left: 3px solid var(–golden);
+line-height: 1.6;
+margin-bottom: 8px;
+}
+
+/* SCHEDULE BAR */
+.schedule {
+background: white;
+border-radius: 16px;
+padding: 16px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+margin-bottom: 8px;
+}
+.schedule-row {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 8px 0;
+border-bottom: 1px dashed #f0e8e0;
+}
+.schedule-row:last-child { border-bottom: none; }
+.schedule-time {
+font-size: 12px;
+font-weight: 500;
+color: var(–terracotta);
+min-width: 40px;
+}
+.schedule-dot {
+width: 8px; height: 8px;
+border-radius: 50%;
+flex-shrink: 0;
+}
+.schedule-label {
+font-size: 13px;
+color: var(–text-mid);
+}
+
+/* WEEK NAV */
+.week-nav {
+display: flex;
+gap: 8px;
+overflow-x: auto;
+padding: 4px 16px 0;
+max-width: 700px;
+margin: 0 auto;
+scrollbar-width: none;
+}
+.week-nav::-webkit-scrollbar { display: none; }
+.day-tab {
+flex-shrink: 0;
+background: white;
+border: none;
+border-radius: 12px;
+padding: 10px 16px;
+cursor: pointer;
+text-align: center;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+transition: all 0.2s;
+}
+.day-tab.active {
+background: var(–terracotta);
+color: white;
+}
+.day-tab .day-name { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.day-tab .day-num { font-family: ‘Playfair Display’, serif; font-size: 18px; }
+.day-tab:not(.active) .day-name { color: var(–text-light); }
+.day-tab:not(.active) .day-num { color: var(–text-dark); }
+
+/* DAY CARDS */
+.day-content { display: none; }
+.day-content.active { display: block; }
+
+.meal-card {
+background: white;
+border-radius: 18px;
+padding: 18px 18px 14px;
+box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+margin-bottom: 12px;
+position: relative;
+overflow: hidden;
+}
+.meal-card::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 4px;
+}
+.meal-card.morning::before { background: linear-gradient(to right, var(–golden), var(–blush)); }
+.meal-card.lunch::before { background: linear-gradient(to right, var(–sage), var(–sky)); }
+.meal-card.snack::before { background: linear-gradient(to right, var(–dusty-rose), var(–lavender)); }
+
+.meal-header {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 12px;
+}
+.meal-icon {
+width: 38px; height: 38px;
+border-radius: 10px;
+display: flex; align-items: center; justify-content: center;
+font-size: 18px;
+flex-shrink: 0;
+}
+.morning .meal-icon { background: var(–golden-light); }
+.lunch .meal-icon { background: var(–sage-light); }
+.snack .meal-icon { background: var(–dusty-rose-light); }
+
+.meal-meta { flex: 1; }
+.meal-type {
+font-size: 10px;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+margin-bottom: 2px;
+}
+.morning .meal-type { color: #c49a30; }
+.lunch .meal-type { color: var(–sage); }
+.snack .meal-type { color: #b07080; }
+
+.meal-name {
+font-family: ‘Playfair Display’, serif;
+font-size: 16px;
+color: var(–text-dark);
+line-height: 1.2;
+}
+
+.meal-time {
+font-size: 11px;
+color: var(–text-light);
+background: var(–cream);
+padding: 3px 8px;
+border-radius: 8px;
+}
+
+.meal-ingredients {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+margin-bottom: 12px;
+}
+.ingredient-tag {
+font-size: 11.5px;
+padding: 4px 10px;
+border-radius: 20px;
+font-weight: 400;
+}
+.morning .ingredient-tag { background: var(–golden-light); color: #9a7820; }
+.lunch .ingredient-tag { background: var(–sage-light); color: #4a7a4a; }
+.snack .ingredient-tag { background: var(–dusty-rose-light); color: #9a5060; }
+
+.meal-how {
+background: var(–cream);
+border-radius: 10px;
+padding: 10px 12px;
+font-size: 12.5px;
+color: var(–text-mid);
+line-height: 1.7;
+}
+.meal-how strong { color: var(–terracotta); font-weight: 500; }
+
+.meal-tip {
+margin-top: 8px;
+font-size: 12px;
+color: var(–text-light);
+display: flex;
+align-items: flex-start;
+gap: 5px;
+line-height: 1.5;
+}
+
+/* TIPS SECTION */
+.tips-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+.tip-card {
+background: white;
+border-radius: 14px;
+padding: 14px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.tip-emoji { font-size: 22px; margin-bottom: 6px; display: block; }
+.tip-title { font-size: 12px; font-weight: 500; color: var(–text-dark); margin-bottom: 4px; }
+.tip-text { font-size: 12px; color: var(–text-light); line-height: 1.6; }
+
+/* NEW FOODS */
+.new-foods {
+background: linear-gradient(135deg, #eef5ee, #f9ede0);
+border-radius: 16px;
+padding: 16px;
+margin-bottom: 12px;
+}
+.new-foods-title {
+font-size: 12px;
+font-weight: 500;
+color: var(–sage);
+text-transform: uppercase;
+letter-spacing: 0.8px;
+margin-bottom: 10px;
+}
+.new-foods-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 7px;
+}
+.new-food-tag {
+background: white;
+border-radius: 10px;
+padding: 5px 10px;
+font-size: 12px;
+color: var(–text-mid);
+box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+padding: 30px 16px 40px;
+font-size: 12px;
+color: var(–text-light);
+line-height: 1.8;
+}
+footer strong { color: var(–terracotta); }
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<div class="hero">
+  <span class="hero-emoji">🌿</span>
+  <h1>Cardápio da Bebê<br><em>7 meses</em></h1>
+  <p>Alimentação variada, com temperos naturais e texturas adequadas para quem ainda não tem dentinhos</p>
+  <div class="badge-row">
+    <span class="badge">🚫 Sem sal</span>
+    <span class="badge">🚫 Sem açúcar</span>
+    <span class="badge">✅ Tudo amassado</span>
+    <span class="badge">✅ Temperos naturais</span>
+  </div>
+</div>
+
+<!-- TEMPEROS -->
+
+<div class="section">
+  <div class="section-title">🌱 Temperos permitidos</div>
+  <div class="spice-grid">
+    <div class="spice-card ok">
+      <div class="spice-card-title">✅ Pode usar</div>
+      <ul class="spice-list">
+        <li>Alho</li>
+        <li>Cebola</li>
+        <li>Salsinha & cebolinha</li>
+        <li>Coentro</li>
+        <li>Manjericão</li>
+        <li>Orégano</li>
+        <li>Tomilho & louro</li>
+        <li>Cúrcuma</li>
+        <li>Canela em pó</li>
+        <li>Azeite extra virgem</li>
+        <li>Suco de limão</li>
+        <li>Alecrim</li>
+      </ul>
+    </div>
+    <div class="spice-card no">
+      <div class="spice-card-title">🚫 Evitar até 1 ano</div>
+      <ul class="spice-list">
+        <li>Sal</li>
+        <li>Açúcar</li>
+        <li>Mel</li>
+        <li>Adoçante</li>
+        <li>Caldos industriais</li>
+        <li>Molhos prontos</li>
+        <li>Pimenta</li>
+        <li>Frituras</li>
+        <li>Leite de vaca puro</li>
+        <li>Clara de ovo crua</li>
+      </ul>
+    </div>
+  </div>
+  <div class="texture-tip">
+    🍴 <strong>Textura ideal:</strong> Tudo bem amassado com garfo ou passado rapidamente no mixer. Sem dentinhos, mas os movimentos de gengiva dela já são eficientes — não precisa ser liso como creme. Pequenos grumos macios são bem-vindos para estimular a mastigação!
+  </div>
+</div>
+
+<!-- ROTINA -->
+
+<div class="section">
+  <div class="section-title">🕐 Rotina do dia</div>
+  <div class="schedule">
+    <div class="schedule-row">
+      <span class="schedule-time">6–7h</span>
+      <div class="schedule-dot" style="background: var(--sky)"></div>
+      <span class="schedule-label">🍼 Leite materno ou fórmula</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-time">9h</span>
+      <div class="schedule-dot" style="background: var(--golden)"></div>
+      <span class="schedule-label">🍓 Fruta da manhã</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-time">12h</span>
+      <div class="schedule-dot" style="background: var(--sage)"></div>
+      <span class="schedule-label">🥦 Almoço (papa salgada)</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-time">15h</span>
+      <div class="schedule-dot" style="background: var(--sky)"></div>
+      <span class="schedule-label">🍼 Leite materno ou fórmula</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-time">17h</span>
+      <div class="schedule-dot" style="background: var(--dusty-rose)"></div>
+      <span class="schedule-label">🍌 Fruta ou papa doce da tarde</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-time">19h+</span>
+      <div class="schedule-dot" style="background: var(--sky)"></div>
+      <span class="schedule-label">🍼 Leite materno ou fórmula</span>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK NAV -->
+
+<div class="week-nav">
+  <button class="day-tab active" onclick="showDay('seg')"><div class="day-name">Seg</div><div class="day-num">1</div></button>
+  <button class="day-tab" onclick="showDay('ter')"><div class="day-name">Ter</div><div class="day-num">2</div></button>
+  <button class="day-tab" onclick="showDay('qua')"><div class="day-name">Qua</div><div class="day-num">3</div></button>
+  <button class="day-tab" onclick="showDay('qui')"><div class="day-name">Qui</div><div class="day-num">4</div></button>
+  <button class="day-tab" onclick="showDay('sex')"><div class="day-name">Sex</div><div class="day-num">5</div></button>
+  <button class="day-tab" onclick="showDay('sab')"><div class="day-name">Sáb</div><div class="day-num">6</div></button>
+  <button class="day-tab" onclick="showDay('dom')"><div class="day-name">Dom</div><div class="day-num">7</div></button>
+</div>
+
+<!-- ======================== SEGUNDA ======================== -->
+
+<div class="section day-content active" id="day-seg">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🍑</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Pera cozida com canela</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍐 Pera</span>
+      <span class="ingredient-tag">🟤 Canela em pó</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Descasque a pera, corte em cubinhos e cozinhe no vapor por 8 min até ficar bem macia. Amasse com garfo e finalize com uma pitadinha de canela. A pera cozida fica naturalmente docinha!
+    </div>
+    <div class="meal-tip">💡 Pera é ótima para o intestino — rica em fibras e bem suave.</div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🥘</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa de frango com abobrinha e cenoura</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍗 Frango</span>
+      <span class="ingredient-tag">🥒 Abobrinha</span>
+      <span class="ingredient-tag">🥕 Cenoura</span>
+      <span class="ingredient-tag">🧅 Cebola</span>
+      <span class="ingredient-tag">🧄 Alho</span>
+      <span class="ingredient-tag">🌿 Salsinha</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Refogue alho e cebola picadinhos no azeite. Adicione o frango em pedaços, cozinhe bem. Junte cenoura e abobrinha em cubos, cubra com água e cozinhe até tudo ficar macio. Amasse tudo junto com um garfo (ou mixer rapidinho). Finalize com salsinha fresca e fio de azeite.
+    </div>
+    <div class="meal-tip">💡 Guarde a água do cozimento! Use para afinar a papa e aproveitar os nutrientes.</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🍌</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Banana com abacate cremoso</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🥑 Abacate</span>
+      <span class="ingredient-tag">🍋 Gotinha de limão</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse meia banana madura com uma colher de abacate até virar um creme. Adicione gotinha de limão para não escurecer e dar um toquinho de frescor. Fica incrivelmente cremoso!
+    </div>
+  </div>
+</div>
+
+<!-- ======================== TERÇA ======================== -->
+
+<div class="section day-content" id="day-ter">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🥭</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Papaya com mamão formosa</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍈 Mamão formosa</span>
+      <span class="ingredient-tag">🍊 Gotinha de laranja</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Retire as sementes, amasse o mamão com um garfo. Adicione umas gotas de suco de laranja natural para enriquecer em vitamina C. O mamão puro já é naturalmente suave e doce!
+    </div>
+    <div class="meal-tip">💡 Mamão é excelente regulador intestinal. Ótimo para bebês.</div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🍲</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa de lentilha com batata-doce e espinafre</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🫘 Lentilha vermelha</span>
+      <span class="ingredient-tag">🍠 Batata-doce</span>
+      <span class="ingredient-tag">🥬 Espinafre</span>
+      <span class="ingredient-tag">🧄 Alho</span>
+      <span class="ingredient-tag">🧅 Cebola</span>
+      <span class="ingredient-tag">💛 Cúrcuma</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Refogue alho e cebola no azeite. Adicione a lentilha vermelha lavada (cozinha rápido!) e batata-doce em cubos. Cubra com água e cozinhe por 15 min. Nos últimos 2 min, adicione o espinafre. Amasse bem. Finalize com uma pitadinha de cúrcuma e fio de azeite.
+    </div>
+    <div class="meal-tip">💡 Lentilha vermelha não precisa deixar de molho e é uma das leguminosas mais fáceis de digerir para bebês.</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🍓</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Morango com banana amassados</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍓 Morango</span>
+      <span class="ingredient-tag">🍌 Banana</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Lave bem os morangos, retire o cabinho e amasse com um garfo junto com a banana madura. O morango dá uma acidez deliciosa que contrasta com a doçura da banana.
+    </div>
+  </div>
+</div>
+
+<!-- ======================== QUARTA ======================== -->
+
+<div class="section day-content" id="day-qua">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🥝</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Kiwi com banana e canela</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🥝 Kiwi</span>
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🟤 Canela</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse o kiwi (bem maduro fica mais suave) com a banana. Finalize com canela em pó. A vitamina C do kiwi potencializa a absorção de ferro das refeições do dia todo!
+    </div>
+    <div class="meal-tip">💡 O kiwi é um dos frutos mais ricos em vitamina C. Uma pequena quantidade já faz diferença.</div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🫕</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa de frango com beterraba e batata</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍗 Frango</span>
+      <span class="ingredient-tag">🟣 Beterraba</span>
+      <span class="ingredient-tag">🥔 Batata</span>
+      <span class="ingredient-tag">🧅 Cebola</span>
+      <span class="ingredient-tag">🌿 Tomilho</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Cozinhe a beterraba e batata em cubos com cebola e tomilho até ficarem bem macias. Cozinhe o frango separado e desfie. Junte tudo e amasse. A beterraba deixa a papa com uma cor rosada linda que as crianças adoram!
+    </div>
+    <div class="meal-tip">💡 Atenção: a beterraba pode colorir a fralda e a urina de vermelho/rosa — é normal e não é motivo de preocupação!</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🥭</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Manga com tangerina</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🥭 Manga</span>
+      <span class="ingredient-tag">🍊 Tangerina</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse a manga bem madura com um garfo e esprema um pouquinho de tangerina. Retire qualquer fio de fibra maior da manga para facilitar. Combinação tropical deliciosa!
+    </div>
+  </div>
+</div>
+
+<!-- ======================== QUINTA ======================== -->
+
+<div class="section day-content" id="day-qui">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🍌</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Banana com mamão e gotinha de limão</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🍈 Mamão</span>
+      <span class="ingredient-tag">🍋 Limão</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse banana madura com mamão. Adicione gotinha de limão siciliano ou tahiti. Super cremoso e nutritivo — uma combinação que a maioria dos bebês adora.
+    </div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🥗</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa de feijão com abóbora e couve</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🫘 Feijão carioca</span>
+      <span class="ingredient-tag">🎃 Abóbora</span>
+      <span class="ingredient-tag">🥬 Couve</span>
+      <span class="ingredient-tag">🧄 Alho</span>
+      <span class="ingredient-tag">🧅 Cebola</span>
+      <span class="ingredient-tag">🌿 Louro</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Use feijão já cozido (sem tempero). Refogue alho e cebola no azeite, adicione abóbora em cubos e o feijão escorrido. Cozinhe com louro por 15 min. Nos últimos 2 min adicione a couve picada. Amasse bem ou passe pelo mixer. Finalize com azeite.
+    </div>
+    <div class="meal-tip">💡 Feijão com couve é uma combinação nutritiva poderosa — ferro + vitamina C na mesma refeição!</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🍐</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Pera com abacate</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍐 Pera madura</span>
+      <span class="ingredient-tag">🥑 Abacate</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Pera bem madura amassada com abacate. Se a pera estiver firme, cozinhe rapidinho no vapor. Textura super suave e cremosa — excelente para quem não tem dentinhos!
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SEXTA ======================== -->
+
+<div class="section day-content" id="day-sex">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🍊</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Tangerina com banana e canela</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍊 Tangerina</span>
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🟤 Canela</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Retire todos os gomos da tangerina, tirando as películas brancas. Amasse com banana e finalize com canela. A tangerina deve ser bem madura para não ficar azeda demais.
+    </div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🍜</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa de frango com macarrão estrelinha e brócolis</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍗 Frango</span>
+      <span class="ingredient-tag">⭐ Macarrão estrelinha</span>
+      <span class="ingredient-tag">🥦 Brócolis</span>
+      <span class="ingredient-tag">🧄 Alho</span>
+      <span class="ingredient-tag">🌿 Salsinha</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Cozinhe o frango com alho. Cozinhe a estrelinha na água do frango (ela absorve o sabor!). Cozinhe o brócolis no vapor. Misture tudo e amasse levemente — a estrelinha já fica bem macia. Finalize com azeite e salsinha.
+    </div>
+    <div class="meal-tip">💡 A estrelinha cozida fica muito macia e é fácil de amassar com a gengiva — textura ideal para 7 meses.</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🥑</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Abacate com banana e gotinha de limão</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🥑 Abacate</span>
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🍋 Limão</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse abacate maduro com banana. Gotinha de limão para não escurecer e dar um toque. Rico em gorduras boas essenciais para o desenvolvimento cerebral da bebê!
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SÁBADO ======================== -->
+
+<div class="section day-content" id="day-sab">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🍓</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Mix de morango, banana e kiwi</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍓 Morango</span>
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🥝 Kiwi</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse tudo junto com um garfo. O resultado é um purê de cor linda, rosada-alaranjada, muito aromático. Morango rico em antioxidantes, kiwi em vitamina C, banana dá cremosidade!
+    </div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🥘</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa de atum com batata-doce e couve-flor</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🐟 Atum natural (em água)</span>
+      <span class="ingredient-tag">🍠 Batata-doce</span>
+      <span class="ingredient-tag">🥦 Couve-flor</span>
+      <span class="ingredient-tag">🧅 Cebola</span>
+      <span class="ingredient-tag">🌿 Cebolinha</span>
+      <span class="ingredient-tag">🍋 Limão</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Cozinhe batata-doce e couve-flor com cebola até ficarem bem macias. Escorra o atum em água (sem sal, verificar rótulo). Misture tudo e amasse. Finalize com limão, cebolinha e azeite. Atum é uma fonte de ômega-3 excelente para o cérebro!
+    </div>
+    <div class="meal-tip">💡 Use atum em água, sem sal. Verifique sempre o rótulo. Não use mais de 1–2x por semana pela questão do mercúrio.</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🥭</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Manga com abacate cremoso</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🥭 Manga palmer</span>
+      <span class="ingredient-tag">🥑 Abacate</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse manga madura (sem fibras) com abacate. Combinação tropical e incrivelmente cremosa. A manga palmer tem menos fio, mais fácil de amassar!
+    </div>
+  </div>
+</div>
+
+<!-- ======================== DOMINGO ======================== -->
+
+<div class="section day-content" id="day-dom">
+
+  <div class="meal-card morning">
+    <div class="meal-header">
+      <div class="meal-icon">🍈</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da manhã</div>
+        <div class="meal-name">Mamão com banana e canela</div>
+      </div>
+      <span class="meal-time">9h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍈 Mamão</span>
+      <span class="ingredient-tag">🍌 Banana</span>
+      <span class="ingredient-tag">🟤 Canela</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Amasse mamão com banana madura. A banana dá uma cremosidade incrível ao mamão. Canela finaliza com aroma delicioso. Um clássico que a maioria dos bebês adora.
+    </div>
+  </div>
+
+  <div class="meal-card lunch">
+    <div class="meal-header">
+      <div class="meal-icon">🍛</div>
+      <div class="meal-meta">
+        <div class="meal-type">Almoço</div>
+        <div class="meal-name">Papa completa: frango, arroz, feijão e legumes</div>
+      </div>
+      <span class="meal-time">12h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍗 Frango</span>
+      <span class="ingredient-tag">🍚 Arroz bem cozido</span>
+      <span class="ingredient-tag">🫘 Feijão</span>
+      <span class="ingredient-tag">🥕 Cenoura</span>
+      <span class="ingredient-tag">🧄 Alho</span>
+      <span class="ingredient-tag">🌿 Salsinha</span>
+      <span class="ingredient-tag">🫒 Azeite</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> A versão bebê do prato mais brasileiro! Refogue alho no azeite, adicione frango desfiado. Junte cenoura cozida, arroz bem cozido e feijão cozido. Misture tudo e amasse bem. Use um pouco do caldo do feijão para afinar. Salsinha e azeite no final.
+    </div>
+    <div class="meal-tip">💡 Arroz + feijão juntos formam uma proteína completa! Prato perfeito e muito nutritivo.</div>
+  </div>
+
+  <div class="meal-card snack">
+    <div class="meal-header">
+      <div class="meal-icon">🍐</div>
+      <div class="meal-meta">
+        <div class="meal-type">Fruta da tarde</div>
+        <div class="meal-name">Pera cozida com morango</div>
+      </div>
+      <span class="meal-time">17h</span>
+    </div>
+    <div class="meal-ingredients">
+      <span class="ingredient-tag">🍐 Pera</span>
+      <span class="ingredient-tag">🍓 Morango</span>
+    </div>
+    <div class="meal-how">
+      <strong>Como fazer:</strong> Cozinhe a pera no vapor até amolecer bem. Amasse com morango fresco (ou levemente aquecido). A combinação doce-ácida é deliciosa e rica em vitaminas!
+    </div>
+  </div>
+</div>
+
+<!-- NOVOS ALIMENTOS -->
+
+<div class="section">
+  <div class="section-title">🌟 Alimentos para introduzir em breve</div>
+  <div class="new-foods">
+    <div class="new-foods-title">Aos 7–8 meses — próximas introduções</div>
+    <div class="new-foods-grid">
+      <span class="new-food-tag">🫘 Feijão preto</span>
+      <span class="new-food-tag">🫘 Grão-de-bico</span>
+      <span class="new-food-tag">🍠 Mandioca</span>
+      <span class="new-food-tag">🐟 Peixe branco</span>
+      <span class="new-food-tag">🥚 Ovo inteiro</span>
+      <span class="new-food-tag">🫑 Pimentão</span>
+      <span class="new-food-tag">🫚 Tomate cozido</span>
+      <span class="new-food-tag">🥦 Couve-de-bruxelas</span>
+      <span class="new-food-tag">🍑 Pêssego</span>
+      <span class="new-food-tag">🍇 Uva s/ semente</span>
+      <span class="new-food-tag">🫐 Mirtilo</span>
+      <span class="new-food-tag">🍚 Arroz integral</span>
+    </div>
+  </div>
+</div>
+
+<!-- DICAS FINAIS -->
+
+<div class="section">
+  <div class="section-title">💬 Dicas importantes</div>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <span class="tip-emoji">🥄</span>
+      <div class="tip-title">Textura sem dentes</div>
+      <div class="tip-text">Tudo amassado com garfo está perfeito. A gengiva dela é mais eficiente do que parece. Pequenos grumos macios são bem-vindos!</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-emoji">🫒</span>
+      <div class="tip-title">Azeite sempre no final</div>
+      <div class="tip-text">Adicione após cozinhar para preservar os nutrientes. É fundamental para absorção de vitaminas e desenvolvimento cerebral.</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-emoji">🆕</span>
+      <div class="tip-title">Novo alimento: 1 por vez</div>
+      <div class="tip-text">Ao introduzir algo novo, espere 2–3 dias antes de introduzir outro. Assim você identifica facilmente qualquer reação alérgica.</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-emoji">💧</span>
+      <div class="tip-title">Água do cozimento</div>
+      <div class="tip-text">A água onde cozinhou legumes e frango tem nutrientes. Use para ajustar a consistência da papa em vez de água pura.</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-emoji">❄️</span>
+      <div class="tip-title">Congelamento</div>
+      <div class="tip-text">As papas salgadas podem ser congeladas em cubinhos por até 30 dias. Facilita muito a rotina da semana!</div>
+    </div>
+    <div class="tip-card">
+      <span class="tip-emoji">👩‍⚕️</span>
+      <div class="tip-title">Pediatra sempre</div>
+      <div class="tip-text">Este cardápio é um guia geral. Siga sempre as orientações do pediatra da sua bebê para as necessidades dela especificamente.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Feito com 💛 para a mamãe e sua bebê<br>
+  <strong>Lembre-se:</strong> cada bebê é único. Respeite o ritmo dela!<br><br>
+  <em>Consulte sempre o pediatra para orientações personalizadas.</em>
+</footer>
+
+<script>
+function showDay(day) {
+  document.querySelectorAll('.day-content').forEach(d => d.classList.remove('active'));
+  document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('day-' + day).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
